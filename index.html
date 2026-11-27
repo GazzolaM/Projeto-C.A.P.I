@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAPI — Robô-guia da FETIN 2026</title>
+  <meta name="description" content="CAPI — Condutor Autônomo de Passeios Interativos. Robô-guia com Raspberry Pi, IA e voz neural, premiado na FETIN 2026.">
+  <meta property="og:title" content="CAPI — Condutor Autônomo de Passeios Interativos">
+  <meta property="og:description" content="Robô-guia que apresenta a história de Sinhá Moreira e conversa com o público. 2º lugar em Viabilidade de Mercado na FETIN 2026 e 2º lugar no Desafio Inovação Turística.">
+  <meta property="og:type" content="website">
+  <style>
+    * { box-sizing: border-box; }
+    :root {
+      color-scheme: dark;
+      --bg: #070d17;
+      --card: rgba(15, 26, 43, .78);
+      --border: rgba(148, 163, 184, .16);
+      --text: #e8eef8;
+      --muted: #93a4bb;
+      --accent: #2dd4bf;
+      --accent-soft: rgba(45, 212, 191, .1);
+    }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background:
+        radial-gradient(900px 500px at 15% -10%, rgba(45, 212, 191, .16), transparent 60%),
+        radial-gradient(800px 500px at 100% 0%, rgba(59, 130, 246, .14), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: clamp(24px, 6vw, 72px) 20px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      width: 100%;
+      max-width: 860px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: clamp(28px, 5vw, 56px);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, .45), inset 0 1px 0 rgba(255, 255, 255, .04);
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .8rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin: 0 0 18px;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 14px var(--accent);
+    }
+    h1 {
+      font-size: clamp(2.6rem, 7vw, 4.2rem);
+      line-height: 1;
+      margin: 0;
+      letter-spacing: -.04em;
+    }
+    h1 span { color: var(--accent); }
+    .subtitle {
+      font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+      margin: 10px 0 0;
+      font-weight: 500;
+    }
+    .lead {
+      color: var(--muted);
+      margin: 12px 0 0;
+      max-width: 60ch;
+    }
+    h2 {
+      font-size: 1.05rem;
+      letter-spacing: .02em;
+      margin: 0 0 10px;
+    }
+    .section {
+      margin-top: 36px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+    .note {
+      color: var(--muted);
+      font-size: .92rem;
+      margin: 0 0 14px;
+    }
+    code {
+      background: rgba(148, 163, 184, .12);
+      padding: .1em .35em;
+      border-radius: 6px;
+      font-size: .9em;
+    }
+    audio {
+      width: 100%;
+      accent-color: var(--accent);
+    }
+    .awards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+    .award {
+      background: var(--accent-soft);
+      border: 1px solid rgba(45, 212, 191, .22);
+      border-radius: 18px;
+      padding: 18px 20px;
+    }
+    .award .medal {
+      font-size: 1.3rem;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .award strong { display: block; font-size: .98rem; }
+    .award small {
+      color: var(--muted);
+      display: block;
+      margin-top: 4px;
+      font-size: .84rem;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 32px;
+    }
+    .links a {
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: .9rem;
+      transition: border-color .2s, color .2s, background .2s;
+    }
+    .links a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(45, 212, 191, .06);
+    }
+    footer {
+      color: var(--muted);
+      font-size: .82rem;
+      margin-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 520px) {
+      main { border-radius: 20px; }
+      footer { flex-direction: column; gap: 2px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">FETIN 2026 · Projeto premiado</p>
+    <h1>CAPI<span>.</span></h1>
+    <p class="subtitle">Condutor Autônomo de Passeios Interativos</p>
+    <p class="lead">Robô-guia que apresenta a história de Sinhá Moreira e conversa com o público em tempo real.</p>
+
+    <section class="section">
+      <h2>Ouça a voz do robô</h2>
+      <p class="note">Abertura da apresentação (16 s), sintetizada com edge-tts na voz <code>pt-BR-AntonioNeural</code>.</p>
+      <audio controls preload="metadata" src="docs/audio/amostra_intro.mp3">
+        Seu navegador não suporta áudio.
+        <a href="docs/audio/amostra_intro.mp3">Baixe o MP3</a>.
+      </audio>
+    </section>
+
+    <section class="section">
+      <h2>Premiações</h2>
+      <div class="awards">
+        <div class="award">
+          <span class="medal">🥈</span>
+          <strong>2º lugar — Viabilidade de Mercado</strong>
+          <small>FETIN 2026</small>
+        </div>
+        <div class="award">
+          <span class="medal">🥈</span>
+          <strong>2º lugar — Inovação Turística</strong>
+          <small>Desafio Inovação Turística · Prefeitura de Santa Rita do Sapucaí</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Sobre o projeto</h2>
+      <p>O CAPI segue um roteiro de dois blocos sobre Sinhá Moreira, abre para dúvidas do público e responde com uma base de conhecimento histórica — sem inventar. Roda em Raspberry Pi, com reconhecimento de voz, API da DeepSeek e voz neural.</p>
+      <p class="note">Projeto encerrado e mantido como documentação técnica. As chaves de API foram revogadas.</p>
+    </section>
+
+    <nav class="links" aria-label="Links do projeto">
+      <a href="https://github.com/GazzolaM/Projeto-C.A.P.I">Repositório</a>
+      <a href="https://github.com/GazzolaM/Projeto-C.A.P.I#readme">README</a>
+      <a href="https://github.com/GazzolaM/Projeto-C.A.P.I/blob/main/docs/ARQUITETURA.md">Arquitetura</a>
+    </nav>
+
+    <footer>
+      <span>Matheus Gazzola</span>
+      <span>Projeto de estande · 2026</span>
+    </footer>
+  </main>
+</body>
+</html>
