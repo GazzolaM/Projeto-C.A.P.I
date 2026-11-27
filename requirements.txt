@@ -1,0 +1,10 @@
+# Dependências do CAPI — documentação histórica
+# O projeto não está mais em operação. As versões são aproximadas: o ambiente
+# original (venv da Raspberry Pi) não foi preservado.
+# Sistema: Raspberry Pi OS + PipeWire/WirePlumber + mpg123.
+#
+# PyAudio depende do PortAudio no sistema:
+#   sudo apt install portaudio19-dev mpg123 wireplumber
+SpeechRecognition>=3.10
+PyAudio>=0.2.13
+edge-tts>=6.1
