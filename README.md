@@ -180,7 +180,7 @@ Este projeto foi feito para funcionar no dia do evento, e essa prioridade aparec
 
 **Matheus Gazzola** — [@GazzolaM](https://github.com/GazzolaM)
 
-<!-- LinkedIn: adicione o link aqui, se quiser. -->
+https://www.linkedin.com/in/matheus-gazzola/
 
 ## Licença
 
