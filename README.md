@@ -17,7 +17,7 @@ MÍDIA: quando tiver as fotos/vídeo, descomente e ajuste os caminhos:
 [![Assista à apresentação](docs/midia/capa-video.jpg)](https://youtu.be/SEU_VIDEO)
 -->
 
-[🌐 Página do projeto](https://gazzolam.github.io/Projeto-C.A.P.I/) · [🔊 Ouça uma amostra da voz do robô](https://gazzolam.github.io/Projeto-C.A.P.I/docs/audio/amostra_intro.mp3) _(abre no player do navegador)_
+[🌐 Página do projeto](https://gazzolam.github.io/Projeto-C.A.P.I/) · [🔊 Ouça uma amostra da voz do robô](https://gazzolam.github.io/Projeto-C.A.P.I/docs/audio/amostra_intro.mp3)
 
 ---
 
