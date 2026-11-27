@@ -127,6 +127,25 @@
       margin-top: 4px;
       font-size: .84rem;
     }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      align-items: start;
+    }
+    .gallery figure { margin: 0; }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+    }
+    .gallery figcaption {
+      color: var(--muted);
+      font-size: .82rem;
+      margin-top: 8px;
+    }
     .links {
       display: flex;
       flex-wrap: wrap;
@@ -191,6 +210,20 @@
           <strong>2º lugar — Inovação Turística</strong>
           <small>Desafio Inovação Turística · Prefeitura de Santa Rita do Sapucaí</small>
         </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Galeria</h2>
+      <div class="gallery">
+        <figure>
+          <img src="docs/midia/equipe-estande.jpg" alt="Equipe do CAPI e orientador no estande da FETIN 2026" loading="lazy">
+          <figcaption>Estande da FETIN 2026</figcaption>
+        </figure>
+        <figure>
+          <img src="docs/midia/equipe-premios.jpg" alt="Equipe do CAPI no palco com os dois troféus e o certificado de 2º lugar" loading="lazy">
+          <figcaption>Premiação: 2º lugar em Viabilidade de Mercado e 2º lugar em Inovação Turística</figcaption>
+        </figure>
       </div>
     </section>
 

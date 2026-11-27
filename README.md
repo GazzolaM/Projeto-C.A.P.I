@@ -10,12 +10,11 @@
 > Este repositório é mantido como **documentação técnica e estudo de caso**: as chaves de API foram revogadas e o sistema **não está mais em operação**.
 
 <!--
-MÍDIA: quando tiver as fotos/vídeo, descomente e ajuste os caminhos:
-
-![CAPI no estande](docs/midia/capi-estande.jpg)
-
+MÍDIA: quando tiver o vídeo, use uma capa clicável:
 [![Assista à apresentação](docs/midia/capa-video.jpg)](https://youtu.be/SEU_VIDEO)
 -->
+
+![Equipe do CAPI e orientador no estande da FETIN 2026](docs/midia/equipe-estande.jpg)
 
 [🌐 Página do projeto](https://gazzolam.github.io/Projeto-C.A.P.I/) · [🔊 Ouça uma amostra da voz do robô](https://gazzolam.github.io/Projeto-C.A.P.I/docs/audio/amostra_intro.mp3)
 
@@ -33,6 +32,10 @@ O robô não é um chatbot solto: ele segue um **roteiro de apresentação em do
 |---|---|---|---|
 | **FETIN 2026** | FETIN | Viabilidade de Mercado | 🥈 2º lugar |
 | **Desafio Inovação Turística** | Prefeitura de Santa Rita do Sapucaí | Inovação Turística | 🥈 2º lugar |
+
+![Equipe do CAPI no palco com os dois troféus e o certificado de 2º lugar](docs/midia/equipe-premios.jpg)
+
+*Equipe do CAPI na premiação da FETIN 2026.*
 
 ## Como funcionava
 
@@ -112,7 +115,8 @@ flowchart LR
 ├── .nojekyll              # desativa o processamento Jekyll
 ├── docs/
 │   ├── ARQUITETURA.md     # detalhamento técnico
-│   └── audio/             # amostra da voz
+│   ├── audio/             # amostra da voz
+│   └── midia/             # fotos do estande e da premiação
 └── LICENSE
 ```
 
