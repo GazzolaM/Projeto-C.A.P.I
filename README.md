@@ -6,7 +6,7 @@
 ![Python](https://img.shields.io/badge/python-3.x-3776AB?logo=python&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-> Projeto desenvolvido e apresentado na **FETIN 2026**, em Santa Rita do Sapucaí (MG).
+> Projeto desenvolvido e apresentado na **FETIN 2026**, em Santa Rita do Sapucaí (MG), onde conquistou o **2º lugar em Viabilidade de Mercado**; também recebeu o **2º lugar no Desafio Inovação Turística**, promovido pela **Prefeitura de Santa Rita do Sapucaí**.
 > Este repositório é mantido como **documentação técnica e estudo de caso**: as chaves de API foram revogadas e o sistema **não está mais em operação**.
 
 <!--
@@ -17,7 +17,7 @@ MÍDIA: quando tiver as fotos/vídeo, descomente e ajuste os caminhos:
 [![Assista à apresentação](docs/midia/capa-video.jpg)](https://youtu.be/SEU_VIDEO)
 -->
 
-[🔊 Ouça uma amostra da voz do robô](docs/audio/amostra_intro.mp3)
+[🔊 Ouça uma amostra da voz do robô](https://cdn.jsdelivr.net/gh/GazzolaM/Projeto-C.A.P.I@main/docs/audio/amostra_intro.mp3) _(abre no player do navegador)_
 
 ---
 
@@ -26,6 +26,13 @@ MÍDIA: quando tiver as fotos/vídeo, descomente e ajuste os caminhos:
 O CAPI (Condutor Autônomo de Passeios Interativos) é um robô-guia criado para receber visitantes e contar a história de **Sinhá Moreira**, personagem central da transformação de Santa Rita do Sapucaí no Vale da Eletrônica. O nome é uma referência à capivara, mascote da cidade.
 
 O robô não é um chatbot solto: ele segue um **roteiro de apresentação em dois blocos**, abre espaço para dúvidas do público depois de cada bloco e só então encerra. A conversa é ancorada em uma base de conhecimento histórica, com instruções rígidas para não inventar informação.
+
+## Premiações
+
+| Premiação | Organização | Categoria | Resultado |
+|---|---|---|---|
+| **FETIN 2026** | FETIN | Viabilidade de Mercado | 🥈 2º lugar |
+| **Desafio Inovação Turística** | Prefeitura de Santa Rita do Sapucaí | Inovação Turística | 🥈 2º lugar |
 
 ## Como funcionava
 
@@ -139,7 +146,7 @@ O watcher ajustava o sink padrão do PipeWire para a caixa Bluetooth antes de in
 
 ## Resultados
 
-O CAPI operou no estande da FETIN apresentando o roteiro completo e respondendo perguntas espontâneas do público, incluindo perguntas fora do roteiro — que eram respondidas apenas quando estavam na base de conhecimento.
+O CAPI operou no estande da FETIN apresentando o roteiro completo e respondendo perguntas espontâneas do público, incluindo perguntas fora do roteiro — que eram respondidas apenas quando estavam na base de conhecimento. O trabalho também recebeu duas premiações, detalhadas na seção [Premiações](#premiações).
 
 <!--
 Preencher com números reais, se quiser:
@@ -180,6 +187,6 @@ Código sob licença [MIT](LICENSE). Os textos do roteiro e a base de conhecimen
 <details>
 <summary>Resumo em inglês</summary>
 
-CAPI is a Raspberry Pi robot guide built for FETIN 2026. It presents a scripted two-part talk about Sinhá Moreira, a key figure in Santa Rita do Sapucaí's transformation into Brazil's "Electronics Valley", and answers audience questions using speech recognition (Google STT), the DeepSeek API for grounded answers, and edge-tts for voice output. The repository is kept as documentation; the API keys were revoked and the system is no longer running.
+CAPI is a Raspberry Pi robot guide built for FETIN 2026. It presents a scripted two-part talk about Sinhá Moreira, a key figure in Santa Rita do Sapucaí's transformation into Brazil's "Electronics Valley", and answers audience questions using speech recognition (Google STT), the DeepSeek API for grounded answers, and edge-tts for voice output. The project won 2nd place in Market Viability at FETIN 2026 and 2nd place in the Tourism Innovation Challenge run by the Santa Rita do Sapucaí city government. The repository is kept as documentation; the API keys were revoked and the system is no longer running.
 
 </details>
