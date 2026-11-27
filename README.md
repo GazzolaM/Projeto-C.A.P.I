@@ -17,7 +17,7 @@ MÍDIA: quando tiver as fotos/vídeo, descomente e ajuste os caminhos:
 [![Assista à apresentação](docs/midia/capa-video.jpg)](https://youtu.be/SEU_VIDEO)
 -->
 
-[🔊 Ouça uma amostra da voz do robô](https://cdn.jsdelivr.net/gh/GazzolaM/Projeto-C.A.P.I@main/docs/audio/amostra_intro.mp3) _(abre no player do navegador)_
+[🌐 Página do projeto](https://gazzolam.github.io/Projeto-C.A.P.I/) · [🔊 Ouça uma amostra da voz do robô](https://gazzolam.github.io/Projeto-C.A.P.I/docs/audio/amostra_intro.mp3) _(abre no player do navegador)_
 
 ---
 
@@ -108,6 +108,8 @@ flowchart LR
 ├── conhecimento.txt       # base de conhecimento histórica
 ├── requirements.txt       # dependências (documentação)
 ├── .env.example           # modelo de configuração da chave
+├── index.html             # landing page publicada no GitHub Pages
+├── .nojekyll              # desativa o processamento Jekyll
 ├── docs/
 │   ├── ARQUITETURA.md     # detalhamento técnico
 │   └── audio/             # amostra da voz
