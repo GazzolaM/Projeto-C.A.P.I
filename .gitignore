@@ -1,5 +1,7 @@
 env_voz/
 *.mp3
+*.wav
+*.pyc
 __pycache__/
 .env
 *.onnx
