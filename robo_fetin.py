@@ -1,3 +1,4 @@
+import contextlib
 import keyboard
 import sys
 import os
@@ -71,33 +72,45 @@ def falar(texto, nome_arquivo="fala_ia.mp3", salvar_cache=False):
         if not salvar_cache and os.path.exists(caminho_arquivo):
             os.remove(caminho_arquivo)
 
+@contextlib.contextmanager
+def stderr_silencioso():
+    salvos = os.dup(2)
+    nulo = os.open(os.devnull, os.O_WRONLY)
+    os.dup2(nulo, 2)
+    try:
+        yield
+    finally:
+        os.dup2(salvos, 2)
+        os.close(salvos)
+        os.close(nulo)
+
 def ouvir_microfone(tempo_espera=4):
     reconhecedor = sr.Recognizer()
     reconhecedor.pause_threshold = 2.0  # 2s de silencio encerram a fala
     
-    with sr.Microphone() as fonte:
-        print("\n🎤 [Ajustando ruído ambiente...]")
-        reconhecedor.adjust_for_ambient_noise(fonte, duration=1)
-        
-        print("🎤 [Ouvindo... Pode falar!]")
+    print("\n🎤 [Ajustando ruído ambiente...]")
+    with stderr_silencioso():
         try:
-            # Espera a fala comecar e limita a frase a 15 segundos
-            audio = reconhecedor.listen(fonte, timeout=tempo_espera, phrase_time_limit=15)
-            
-            print("⏳ [Traduzindo voz para texto...]")
-            texto = reconhecedor.recognize_google(audio, language='pt-BR')
-            print(f"👤 Visitante disse: {texto}")
-            return texto
-            
+            with sr.Microphone() as fonte:
+                reconhecedor.adjust_for_ambient_noise(fonte, duration=1)
+                print("🎤 [Ouvindo... Pode falar!]")
+                # Espera a fala comecar e limita a frase a 15 segundos
+                audio = reconhecedor.listen(fonte, timeout=tempo_espera, phrase_time_limit=15)
         except sr.WaitTimeoutError:
             return ""
-        except sr.UnknownValueError:
-            print("❌ [Não entendi o que foi dito. Pode repetir?]")
-            falar("Não entendi, pode repetir?", "cache_nao_entendi.mp3", salvar_cache=True)
-            return ""
-        except sr.RequestError as e:
-            print(f"❌ [Erro de conexão com o Google: {e}]")
-            return ""
+    
+    print("⏳ [Traduzindo voz para texto...]")
+    try:
+        texto = reconhecedor.recognize_google(audio, language='pt-BR')
+        print(f"👤 Visitante disse: {texto}")
+        return texto
+    except sr.UnknownValueError:
+        print("❌ [Não entendi o que foi dito. Pode repetir?]")
+        falar("Não entendi, pode repetir?", "cache_nao_entendi.mp3", salvar_cache=True)
+        return ""
+    except sr.RequestError as e:
+        print(f"❌ [Erro de conexão com o Google: {e}]")
+        return ""
 
 def carregar_chave_deepseek():
     chave = os.environ.get("DEEPSEEK_API_KEY", "")
