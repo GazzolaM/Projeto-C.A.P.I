@@ -1,5 +1,4 @@
 import contextlib
-import keyboard
 import sys
 import os
 import json
