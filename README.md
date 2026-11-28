@@ -9,10 +9,6 @@
 > Projeto desenvolvido e apresentado na **FETIN 2026**, em Santa Rita do Sapucaí (MG), onde conquistou o **2º lugar em Viabilidade de Mercado**; também recebeu o **2º lugar no Desafio Inovação Turística**, promovido pela **Prefeitura de Santa Rita do Sapucaí**.
 > Este repositório é mantido como **documentação técnica e estudo de caso**: as chaves de API foram revogadas e o sistema **não está mais em operação**.
 
-<!--
-MÍDIA: quando tiver o vídeo, use uma capa clicável:
-[![Assista à apresentação](docs/midia/capa-video.jpg)](https://youtu.be/SEU_VIDEO)
--->
 
 ![Equipe do CAPI e orientador no estande da FETIN 2026](docs/midia/equipe-estande.jpg)
 
@@ -154,13 +150,7 @@ O watcher ajustava o sink padrão do PipeWire para a caixa Bluetooth antes de in
 
 O CAPI operou no estande da FETIN apresentando o roteiro completo e respondendo perguntas espontâneas do público, incluindo perguntas fora do roteiro — que eram respondidas apenas quando estavam na base de conhecimento. O trabalho também recebeu duas premiações, detalhadas na seção [Premiações](#premiações).
 
-<!--
-Preencher com números reais, se quiser:
-- público estimado que passou pelo estande;
-- quantidade aproximada de perguntas respondidas;
-- dias de operação;
-- tempo médio de resposta.
--->
+
 
 ## Limitações e o que eu faria diferente
 
